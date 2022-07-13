@@ -1,37 +1,25 @@
 <template>
-  <div class="container">
-    <h4>My First Web App</h4>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>
 
-export default {
-  name: 'App',
-  components: {
 
+export default {
+  name: 'App.vue',
+  data() {
+    return {
+      title : ['첫번째 메모', '두번째 메모', '세번째 메모', '네번째 메모', '다섯번째 메모'],
+    }
+  },
+  components: {
+    
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin: 0 auto;
-}
+@import './css/main.css';
+@import '/src/css/content.css';
 
-.container {
-  background-color: palevioletred;
-  max-width: 600px;
-  height: 100vh;
-
-  /* center sort */
-  display: block; 
-  margin-left: auto;
-  margin-right: auto;
-}
 </style>
