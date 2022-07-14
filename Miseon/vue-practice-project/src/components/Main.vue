@@ -4,11 +4,11 @@
 
     <div class="memo" v-for="i in 4" :key="i" @click="contentView = true; $router.push('/detail')">
       <div class="memo-title">
-        메모
+        {{title[i - 1]}}
       </div>
       
       <div class="memo-content">
-        내용
+        {{content[i - 1]}}
       </div>
     </div>
   </div>
@@ -23,6 +23,8 @@ export default {
   data() {
     return {
       contentView: false,
+      title: ["메모 1", "메모 2", "메모 3", "메모 4"],
+      content: ["내용 1", "내용 2", "내용 3", "내용 4"]
     }
   },
   components: {
