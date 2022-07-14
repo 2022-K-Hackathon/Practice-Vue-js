@@ -1,25 +1,25 @@
 <template>
-  <router-view></router-view>
+  <Main></Main>
 </template>
 
 <script>
-
+import Main from "./components/Main.vue";
 
 export default {
   name: 'App.vue',
   data() {
     return {
-      title : ['첫번째 메모', '두번째 메모', '세번째 메모', '네번째 메모', '다섯번째 메모'],
+
     }
   },
   components: {
-    
+    Main: Main,
   }
 }
 </script>
 
 <style>
 @import './css/main.css';
-@import '/src/css/content.css';
+@import './css/content.css';
 
 </style>
